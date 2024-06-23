@@ -19,7 +19,7 @@ export class LabsComponent {
     'Crear un servicio',
   ]);
   name = signal('Nicolas');
-  age= 18;
+  age= 20;
   disabled = true;
   img = 'https://w3schools.com/howto/img_avatar.png';
 

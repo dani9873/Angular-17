@@ -1,0 +1,163 @@
+[debug] [2024-06-23T02:47:18.803Z] ----------------------------------------------------------------------
+[debug] [2024-06-23T02:47:18.806Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2024-06-23T02:47:18.806Z] CLI Version:   13.11.4
+[debug] [2024-06-23T02:47:18.806Z] Platform:      win32
+[debug] [2024-06-23T02:47:18.806Z] Node Version:  v20.11.1
+[debug] [2024-06-23T02:47:18.806Z] Time:          Sat Jun 22 2024 20:47:18 GMT-0600 (hora estándar central)
+[debug] [2024-06-23T02:47:18.806Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-23T02:47:18.865Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-23T02:47:18.870Z] > authorizing via signed-in user (danielescobar.987@gmail.com)
+[debug] [2024-06-23T02:47:18.871Z] [iam] checking project mydayapp-e359a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-23T02:47:18.873Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions [none]
+[debug] [2024-06-23T02:47:18.873Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions x-goog-quota-user=projects/mydayapp-e359a
+[debug] [2024-06-23T02:47:18.874Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-23T02:47:19.290Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions 200
+[debug] [2024-06-23T02:47:19.291Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-23T02:47:19.292Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mydayapp-e359a [none]
+[debug] [2024-06-23T02:47:19.806Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mydayapp-e359a 200
+[debug] [2024-06-23T02:47:19.807Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mydayapp-e359a {"projectId":"mydayapp-e359a","projectNumber":"296845757247","displayName":"mydayapp","name":"projects/mydayapp-e359a","resources":{"hostingSite":"mydayapp-e359a"},"state":"ACTIVE","etag":"1_6658fe02-5c6a-44cd-8937-2714e9ef5f12"}
+[info] 
+[info] === Deploying to 'mydayapp-e359a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-06-23T02:47:19.813Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions [none]
+[debug] [2024-06-23T02:47:19.813Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-06-23T02:47:20.412Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions 200
+[debug] [2024-06-23T02:47:20.414Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions {"name":"projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[mydayapp-e359a]: beginning deploy... 
+[info] i  hosting[mydayapp-e359a]: found 7 files in dist/todoapp 
+[debug] [2024-06-23T02:47:20.427Z] [hosting] uploading with 200 concurrency
+[debug] [2024-06-23T02:47:20.431Z] [hosting] hash cache [ZGlzdFx0b2RvYXBw] stored for 7 files
+[debug] [2024-06-23T02:47:20.432Z] [hosting][hash queue][FINAL] {"max":0,"min":0,"avg":0,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":3}
+[debug] [2024-06-23T02:47:20.433Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5:populateFiles [none]
+[debug] [2024-06-23T02:47:20.433Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5:populateFiles {"files":{"/index.html":"bf0442fd4291d2bf919afc395cc60d3ab49bd3491806ab035e28301e0e8f052a","/3rdpartylicenses.txt":"dd633a4cef4c431cba7bf36e2df489a4057341e1c88cd43bed209fbebbbc86d9","/browser\\styles-JQQFZKRM.css":"1a01f80c49e14292e15abafe0bf8645e26a26cec2ed9a551ebf1fa18cc67c3a6","/browser\\polyfills-6EAL64PA.js":"408374a568c92807dd7a5f9f961b79bfc13404af9794fd711a2a6b2c1d5d715d","/browser\\main-PNNUV3Z6.js":"21d2e942e0488611f8b01ea3609edb03ee6f47948898eb055f175150ac990c7f","/browser\\index.html":"1c3bc80bdc8f4c985fc3e8d3b41493b216185118ecb1bc699764c98df435d505","/browser\\favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912"}}
+[debug] [2024-06-23T02:47:20.638Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5:populateFiles 200
+[debug] [2024-06-23T02:47:20.639Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5/files"}
+[debug] [2024-06-23T02:47:20.640Z] [hosting][populate queue][FINAL] {"max":210,"min":210,"avg":210,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":210}
+[debug] [2024-06-23T02:47:20.640Z] [hosting] uploads queued: 0
+[debug] [2024-06-23T02:47:20.640Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1719110840640}
+[info] i  hosting: upload complete 
+[info] +  hosting[mydayapp-e359a]: file upload complete 
+[debug] [2024-06-23T02:47:20.643Z] [hosting] deploy completed after 226ms
+[debug] [2024-06-23T02:47:20.644Z] [
+  {
+    "config": {
+      "public": "dist/todoapp",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "mydayapp-e359a"
+    },
+    "version": "projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5"
+  }
+]
+[info] i  hosting[mydayapp-e359a]: finalizing version... 
+[debug] [2024-06-23T02:47:20.649Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5 updateMask=status%2Cconfig
+[debug] [2024-06-23T02:47:20.649Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-06-23T02:47:20.793Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5 200
+[debug] [2024-06-23T02:47:20.794Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5 {"name":"projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-06-23T02:47:20.215697Z","createUser":{"email":"danielescobar.987@gmail.com"},"finalizeTime":"2024-06-23T02:47:20.808794Z","finalizeUser":{"email":"danielescobar.987@gmail.com"}}
+[debug] [2024-06-23T02:47:20.795Z] [hosting] finalized version for mydayapp-e359a:[object Object]
+[info] +  hosting[mydayapp-e359a]: version finalized 
+[info] i  hosting[mydayapp-e359a]: releasing new version... 
+[debug] [2024-06-23T02:47:20.797Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases versionName=projects%2F296845757247%2Fsites%2Fmydayapp-e359a%2Fversions%2Fa4edb2b30ab1caf5
+[debug] [2024-06-23T02:47:20.797Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases {}
+[debug] [2024-06-23T02:47:20.991Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases 200
+[debug] [2024-06-23T02:47:20.991Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases {"name":"projects/296845757247/sites/mydayapp-e359a/channels/live/releases/1719110840447000","version":{"name":"projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-06-23T02:47:20.215697Z","createUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"},"finalizeTime":"2024-06-23T02:47:20.808794Z","finalizeUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}},"type":"DEPLOY","releaseTime":"2024-06-23T02:47:20.447Z","releaseUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}}
+[debug] [2024-06-23T02:47:20.994Z] [hosting] release: {"name":"projects/296845757247/sites/mydayapp-e359a/channels/live/releases/1719110840447000","version":{"name":"projects/296845757247/sites/mydayapp-e359a/versions/a4edb2b30ab1caf5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-06-23T02:47:20.215697Z","createUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"},"finalizeTime":"2024-06-23T02:47:20.808794Z","finalizeUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}},"type":"DEPLOY","releaseTime":"2024-06-23T02:47:20.447Z","releaseUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}}
+[info] +  hosting[mydayapp-e359a]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/mydayapp-e359a/overview
+[info] Hosting URL: https://mydayapp-e359a.web.app
+[debug] [2024-06-23T02:50:40.779Z] ----------------------------------------------------------------------
+[debug] [2024-06-23T02:50:40.780Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2024-06-23T02:50:40.781Z] CLI Version:   13.11.4
+[debug] [2024-06-23T02:50:40.781Z] Platform:      win32
+[debug] [2024-06-23T02:50:40.781Z] Node Version:  v20.11.1
+[debug] [2024-06-23T02:50:40.781Z] Time:          Sat Jun 22 2024 20:50:40 GMT-0600 (hora estándar central)
+[debug] [2024-06-23T02:50:40.781Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-23T02:50:40.859Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-23T02:50:40.861Z] > authorizing via signed-in user (danielescobar.987@gmail.com)
+[debug] [2024-06-23T02:50:40.861Z] [iam] checking project mydayapp-e359a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-23T02:50:40.863Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions [none]
+[debug] [2024-06-23T02:50:40.863Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions x-goog-quota-user=projects/mydayapp-e359a
+[debug] [2024-06-23T02:50:40.864Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-23T02:50:41.286Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions 200
+[debug] [2024-06-23T02:50:41.287Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mydayapp-e359a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-23T02:50:41.288Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mydayapp-e359a [none]
+[debug] [2024-06-23T02:50:41.666Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mydayapp-e359a 200
+[debug] [2024-06-23T02:50:41.667Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mydayapp-e359a {"projectId":"mydayapp-e359a","projectNumber":"296845757247","displayName":"mydayapp","name":"projects/mydayapp-e359a","resources":{"hostingSite":"mydayapp-e359a"},"state":"ACTIVE","etag":"1_6658fe02-5c6a-44cd-8937-2714e9ef5f12"}
+[info] 
+[info] === Deploying to 'mydayapp-e359a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-06-23T02:50:41.672Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions [none]
+[debug] [2024-06-23T02:50:41.673Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-06-23T02:50:42.943Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions 200
+[debug] [2024-06-23T02:50:42.944Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions {"name":"projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[mydayapp-e359a]: beginning deploy... 
+[info] i  hosting[mydayapp-e359a]: found 5 files in dist/todoapp/browser 
+[debug] [2024-06-23T02:50:42.955Z] [hosting] uploading with 200 concurrency
+[debug] [2024-06-23T02:50:42.956Z] [hosting] hash cache [ZGlzdFx0b2RvYXBwXGJyb3dzZXI] not populated
+[debug] [2024-06-23T02:50:42.976Z] [hosting] hash cache [ZGlzdFx0b2RvYXBwXGJyb3dzZXI] stored for 5 files
+[debug] [2024-06-23T02:50:42.977Z] [hosting][hash queue][FINAL] {"max":16,"min":7,"avg":9.4,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":20}
+[debug] [2024-06-23T02:50:42.978Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f:populateFiles [none]
+[debug] [2024-06-23T02:50:42.978Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f:populateFiles {"files":{"/styles-JQQFZKRM.css":"1a01f80c49e14292e15abafe0bf8645e26a26cec2ed9a551ebf1fa18cc67c3a6","/index.html":"1c3bc80bdc8f4c985fc3e8d3b41493b216185118ecb1bc699764c98df435d505","/polyfills-6EAL64PA.js":"408374a568c92807dd7a5f9f961b79bfc13404af9794fd711a2a6b2c1d5d715d","/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/main-PNNUV3Z6.js":"21d2e942e0488611f8b01ea3609edb03ee6f47948898eb055f175150ac990c7f"}}
+[debug] [2024-06-23T02:50:43.418Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f:populateFiles 200
+[debug] [2024-06-23T02:50:43.418Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/mydayapp-e359a/versions/5a3f2f4ecded190f/files"}
+[debug] [2024-06-23T02:50:43.419Z] [hosting][populate queue][FINAL] {"max":445,"min":445,"avg":445,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":445}
+[debug] [2024-06-23T02:50:43.419Z] [hosting] uploads queued: 0
+[debug] [2024-06-23T02:50:43.420Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1719111043420}
+[info] i  hosting: upload complete 
+[info] +  hosting[mydayapp-e359a]: file upload complete 
+[debug] [2024-06-23T02:50:43.421Z] [hosting] deploy completed after 474ms
+[debug] [2024-06-23T02:50:43.421Z] [
+  {
+    "config": {
+      "public": "dist/todoapp/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "mydayapp-e359a"
+    },
+    "version": "projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f"
+  }
+]
+[info] i  hosting[mydayapp-e359a]: finalizing version... 
+[debug] [2024-06-23T02:50:43.424Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/5a3f2f4ecded190f updateMask=status%2Cconfig
+[debug] [2024-06-23T02:50:43.424Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/5a3f2f4ecded190f {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-06-23T02:50:44.026Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/5a3f2f4ecded190f 200
+[debug] [2024-06-23T02:50:44.027Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/versions/5a3f2f4ecded190f {"name":"projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-06-23T02:50:42.268326Z","createUser":{"email":"danielescobar.987@gmail.com"},"finalizeTime":"2024-06-23T02:50:43.974140Z","finalizeUser":{"email":"danielescobar.987@gmail.com"}}
+[debug] [2024-06-23T02:50:44.029Z] [hosting] finalized version for mydayapp-e359a:[object Object]
+[info] +  hosting[mydayapp-e359a]: version finalized 
+[info] i  hosting[mydayapp-e359a]: releasing new version... 
+[debug] [2024-06-23T02:50:44.030Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases versionName=projects%2F296845757247%2Fsites%2Fmydayapp-e359a%2Fversions%2F5a3f2f4ecded190f
+[debug] [2024-06-23T02:50:44.031Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases {}
+[debug] [2024-06-23T02:50:44.642Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases 200
+[debug] [2024-06-23T02:50:44.643Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mydayapp-e359a/channels/live/releases {"name":"projects/296845757247/sites/mydayapp-e359a/channels/live/releases/1719111043890000","version":{"name":"projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-06-23T02:50:42.268326Z","createUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"},"finalizeTime":"2024-06-23T02:50:43.974140Z","finalizeUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}},"type":"DEPLOY","releaseTime":"2024-06-23T02:50:43.890Z","releaseUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}}
+[debug] [2024-06-23T02:50:44.645Z] [hosting] release: {"name":"projects/296845757247/sites/mydayapp-e359a/channels/live/releases/1719111043890000","version":{"name":"projects/296845757247/sites/mydayapp-e359a/versions/5a3f2f4ecded190f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-06-23T02:50:42.268326Z","createUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"},"finalizeTime":"2024-06-23T02:50:43.974140Z","finalizeUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}},"type":"DEPLOY","releaseTime":"2024-06-23T02:50:43.890Z","releaseUser":{"email":"danielescobar.987@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIzAmbAsU3YRhmicj7ubl-Jg-7J1lwoxec_0llnsKWgcrH343W3"}}
+[info] +  hosting[mydayapp-e359a]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/mydayapp-e359a/overview
+[info] Hosting URL: https://mydayapp-e359a.web.app
